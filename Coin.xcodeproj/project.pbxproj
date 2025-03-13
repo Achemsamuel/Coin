@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		62A432342D82D33C00A0FBC1 /* CoinNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 62A432332D82D33C00A0FBC1 /* CoinNetworking */; };
+		62A432812D834A7B00A0FBC1 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 62A432802D834A7B00A0FBC1 /* SwiftSVG */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		62A431FD2D8243A800A0FBC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +32,25 @@
 		62A431EA2D8243A700A0FBC1 /* Coin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A431FC2D8243A800A0FBC1 /* CoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A432062D8243A800A0FBC1 /* CoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62A4322B2D82459A00A0FBC1 /* CoinNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoinNetworking; path = ../CoinNetworking; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		62A4322D2D82CF4100A0FBC1 /* Exceptions for "Coin" folder in "Coin" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 62A431E92D8243A700A0FBC1 /* Coin */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		62A431EC2D8243A700A0FBC1 /* Coin */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				62A4322D2D82CF4100A0FBC1 /* Exceptions for "Coin" folder in "Coin" target */,
+			);
 			path = Coin;
 			sourceTree = "<group>";
 		};
@@ -52,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62A432342D82D33C00A0FBC1 /* CoinNetworking in Frameworks */,
+				62A432812D834A7B00A0FBC1 /* SwiftSVG in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +96,11 @@
 		62A431E12D8243A700A0FBC1 = {
 			isa = PBXGroup;
 			children = (
+				62A4322A2D82452000A0FBC1 /* Packages */,
 				62A431EC2D8243A700A0FBC1 /* Coin */,
 				62A431FF2D8243A800A0FBC1 /* CoinTests */,
 				62A432092D8243A800A0FBC1 /* CoinUITests */,
+				62A432322D82D33C00A0FBC1 /* Frameworks */,
 				62A431EB2D8243A700A0FBC1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +113,21 @@
 				62A432062D8243A800A0FBC1 /* CoinUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		62A4322A2D82452000A0FBC1 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				62A4322B2D82459A00A0FBC1 /* CoinNetworking */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		62A432322D82D33C00A0FBC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +150,8 @@
 			);
 			name = Coin;
 			packageProductDependencies = (
+				62A432332D82D33C00A0FBC1 /* CoinNetworking */,
+				62A432802D834A7B00A0FBC1 /* SwiftSVG */,
 			);
 			productName = Coin;
 			productReference = 62A431EA2D8243A700A0FBC1 /* Coin.app */;
@@ -195,6 +235,9 @@
 			);
 			mainGroup = 62A431E12D8243A700A0FBC1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				62A4327F2D834A7B00A0FBC1 /* XCRemoteSwiftPackageReference "SwiftSVG" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 62A431EB2D8243A700A0FBC1 /* Products */;
 			projectDirPath = "";
@@ -393,17 +436,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Coin/Coin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				COIN_API_KEY = coinranking10f3d88a9c3d0d782237be145e96679a13990f5737cdc5c3;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Coin/Preview Content\"";
 				DEVELOPMENT_TEAM = 5L94XRPVKN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Coin;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -422,17 +469,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Coin/Coin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				COIN_API_KEY = coinranking10f3d88a9c3d0d782237be145e96679a13990f5737cdc5c3;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Coin/Preview Content\"";
 				DEVELOPMENT_TEAM = 5L94XRPVKN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Coin;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,6 +609,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		62A4327F2D834A7B00A0FBC1 /* XCRemoteSwiftPackageReference "SwiftSVG" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mchoe/SwiftSVG";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		62A432332D82D33C00A0FBC1 /* CoinNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoinNetworking;
+		};
+		62A432802D834A7B00A0FBC1 /* SwiftSVG */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62A4327F2D834A7B00A0FBC1 /* XCRemoteSwiftPackageReference "SwiftSVG" */;
+			productName = SwiftSVG;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 62A431E22D8243A700A0FBC1 /* Project object */;
 }
