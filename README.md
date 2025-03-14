@@ -14,9 +14,19 @@ Coin is an iOS app that helps users track cryptocurrency prices, view historical
 ---
 
 ## 🛠 Tech Stack  
+- **UIKit** – For Programmatic UI  
 - **SwiftUI** – For modern declarative UI  
 - **Combine** – For managing asynchronous data streams  
 - **Charts** – For interactive data visualization  
 - **CoinRanking API** – Fetches real-time cryptocurrency data  
 
 ---
+
+## Run the App
+- Download the source file
+- Click to open and run it with Xcode 
+- Build the application and test it.
+
+## Challenges 
+- **Loading SVG in Swift**
+  This was solved by utilizing the powerful Swift WKWebViw to load the SVG. Firstly, the SVG is downloaded using the URLSessionDataTask and then the data is conveted into a String(data: svgData, encoding: .utf8). This string is then loaded inside a <div>svgString<\div> and loaded into the WKWebView.
