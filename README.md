@@ -28,5 +28,6 @@ Coin is an iOS app that helps users track cryptocurrency prices, view historical
 - Build the application and test it.
 
 ## Challenges 
-- **Loading SVG in Swift**
-  This was solved by utilizing the powerful Swift WKWebViw to load the SVG. Firstly, the SVG is downloaded using the URLSessionDataTask and then the data is conveted into a String(data: svgData, encoding: .utf8). This string is then loaded inside a <div>svgString<\div> and loaded into the WKWebView.
+- **Loading SVG in Swift:**
+  
+This was solved by utilizing the powerful Swift WKWebViw to load the SVG. Firstly, the SVG is downloaded using the URLSessionDataTask and then the data is conveted into a String(data: svgData, encoding: .utf8). This string is then loaded inside a <div>svgString<\div> and loaded into the WKWebView.
