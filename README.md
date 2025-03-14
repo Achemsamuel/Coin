@@ -33,3 +33,9 @@ Coin is an iOS app that helps users track cryptocurrency prices, view historical
 - This was solved by utilizing the powerful Swift WKWebViw to load the SVG.
 - Firstly, the SVG is downloaded using the URLSessionDataTask and then the data is conveted into a String(data: svgData, encoding: .utf8).
 - This string is then loaded inside a <div>svgString<\div> and loaded into the WKWebView.
+
+## Screenshots
+![Coin List View]([(https://i.postimg.cc/G3Ggn0JV/temp-Imagehh-QGg3.avif)])
+![Coin List View (Dark)]([https://i.postimg.cc/wTzf6Wwv/temp-Image-P1i45-X.avif])
+![Coin Detail View]([(https://i.postimg.cc/brc6SL8m/temp-Image7-Qz4gz.avif)])
+![Coin Favorites View]([(https://i.postimg.cc/sxYTYSgs/temp-Image-BJet-NN.avif)])
