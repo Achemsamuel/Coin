@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoinNetworking
 
 final class LandingViewController: UIViewController {
     
@@ -75,9 +76,15 @@ final class LandingViewController: UIViewController {
             
             continueButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+        
+        checkInternetConnection()
     }
     
     @objc private func handleContinue() {
         action?()
+    }
+    
+    private func checkInternetConnection() {
+        CoinReachability.checkInternetConnection()
     }
 }

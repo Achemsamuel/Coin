@@ -56,3 +56,9 @@ final class CoinApi: CoinNetworkingService, @unchecked Sendable  {
         return try await super.makeRequest(url: url, parameters: parameters, method: method, returning: objectType)
     }
 }
+
+enum CoinReachability {
+    static func checkInternetConnection() {
+        _ = Reachability.isConnectedToNetwork()
+    }
+}

@@ -141,5 +141,9 @@ extension CoinDetailView {
             guard coinPriceHistory[selectedTimeframe] == nil else { return }
             fetchCoinPriceHistory()
         }
+        
+        deinit {
+            print(#function, #fileID)
+        }
     }
 }
