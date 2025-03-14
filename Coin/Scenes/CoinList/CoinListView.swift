@@ -66,6 +66,7 @@ struct CoinListView: View {
                 } label: {
                     HStack(spacing: 10) {
                         Text(option.title)
+                            .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                         if viewModel.sortOption == option {
                             Image(systemName: "checkmark")
                         }
@@ -83,6 +84,7 @@ struct CoinListView: View {
             ProgressView()
             Text("Loading" + String(repeating: ".", count: viewModel.dotCount))
                 .font(.body)
+                .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                 .onReceive(viewModel.timer) { _ in
                     if viewModel.showLoader {
                         viewModel.dotCount = (viewModel.dotCount + 1) % (viewModel.maxDots + 1)

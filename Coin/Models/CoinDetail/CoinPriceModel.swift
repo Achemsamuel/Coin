@@ -14,6 +14,10 @@ struct CoinHistoryData: Codable {
 struct CoinHistoryItem: Codable {
     let price: String
     let timestamp: Int
+    
+    var displayPrice: Double {
+        Double(price) ?? 0
+    }
 }
 
 extension RemoteCoinHistoryItem {

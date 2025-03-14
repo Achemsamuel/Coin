@@ -19,11 +19,13 @@ struct CoinListItemView: View {
                         .font(.caption)
                         .fontWeight(.bold)
                         .layoutPriority(1)
+                        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
 
                     Text(coin.name)
                         .font(.caption)
                         .foregroundStyle(.secondary)
                         .layoutPriority(1)
+                        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                 }
 
                 Spacer()
@@ -57,6 +59,7 @@ private struct PriceView: View {
             .font(.caption)
             .fontWeight(.medium)
             .foregroundStyle(.primary)
+            .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
     }
 }
 
@@ -74,6 +77,7 @@ private struct ChangeView: View {
             .padding(.vertical, 2)
             .background(changeColor)
             .clipShape(RoundedRectangle(cornerRadius: 3))
+            .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
     }
 }
 

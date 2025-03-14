@@ -18,6 +18,7 @@ struct CoinFavoritesView: View {
                     Spacer()
                     Text("You haven't added any favorites yet!")
                         .font(.body)
+                        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                     Spacer()
                 }
             } else {

@@ -18,7 +18,7 @@ extension String {
         return self.withoutAnySpecialCharacters.commasRemoved
     }
     
-    func currencyFormatted(symbol: String, decimalPlaces: Int = 0) -> String {
+    func currencyFormatted(symbol: String, decimalPlaces: Int = 2) -> String {
         let value = self.currencyStripped
         if let doubleValue = Double(value) {
             

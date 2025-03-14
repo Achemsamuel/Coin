@@ -58,11 +58,9 @@ extension CoinListView {
             Task {
                 do {
                     let coinResponse = try await apiClient.get(limit: limit, offset: offset, returning: CoinRemoteResponse.self)
-                    print("here ooo ")
                     runOnMainThread { [weak self] in
                         guard let self else { return }
                         let coinsArray = coinResponse?.data?.toCoinData(favorites: Array(dataStore.favorites)).coins ?? []
-                        print("offset: \(offset)")
                         self.offset = offset
                         dataStore.coins.formUnion(coinsArray)
                         totalCoinsCount = coinResponse?.data?.stats?.totalCoins ?? 0
@@ -93,7 +91,6 @@ extension CoinListView {
         func verifyCoinPosition(via coin: Coin) {
             if coin.uuid == filteredList.last?.uuid {
                 //Fetching more coins
-                print("fetch more coins")
                 prefetchMoreCoins()
             }
         }

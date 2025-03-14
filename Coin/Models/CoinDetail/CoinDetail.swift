@@ -15,7 +15,7 @@ struct CoinDetail {
     let description: String
     let color: String
     let iconUrl: URL?
-    let websiteUrl: URL?
+    let websiteUrl: URL
     let links: [CoinLink]
     let supply: CoinSupply
     let volume24h: String
@@ -34,6 +34,14 @@ struct CoinDetail {
     let listedAt: Int
     let notices: [CoinNotice]
     let tags: [String]
+    
+    var displayMarketCap: String {
+        marketCap.currencyStripped.currencyFormatted(symbol: "$")
+    }
+    
+    var displayVolume24h: String {
+        volume24h.currencyStripped.currencyFormatted(symbol: "$")
+    }
 }
 
 // MARK: - Coin Link Model
@@ -49,7 +57,15 @@ struct CoinSupply {
     let supplyAt: Int
     let circulating: String
     let total: String
-    let max: String?
+    let max: String
+    
+    var displayCirculatingSupply: String {
+        circulating.currencyStripped.currencyFormatted(symbol: "")
+    }
+    
+    var displayMaxSupply: String {
+        max.currencyStripped.currencyFormatted(symbol: "")
+    }
     
     static var dummy: Self {
         CoinSupply(confirmed: false, supplyAt: 0, circulating: "", total: "", max: "")
@@ -60,6 +76,10 @@ struct CoinSupply {
 struct AllTimeHigh {
     let price: String
     let timestamp: Int
+    
+    var displayPrice: String {
+        price.currencyStripped.currencyFormatted(symbol: "$")
+    }
     
     static var dummy: Self {
         AllTimeHigh(price: "", timestamp: 0)
@@ -109,7 +129,7 @@ extension RemoteCoinDetail {
                    name: name ?? "",
                    description: description ?? "",
                    color: color ?? "", iconUrl: iconUrl?.url,
-                   websiteUrl: websiteUrl?.url,
+                   websiteUrl: (websiteUrl?.url ?? URL(string: "www.google.com"))!,
                    links: (links ?? []).map{ $0.coinLink },
                    supply: supply?.coinSupply ?? .dummy,
                    volume24h: volume24h ?? "",

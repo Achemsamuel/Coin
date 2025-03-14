@@ -58,6 +58,14 @@ struct Coin: Hashable {
         positiveChange ? .green : .red
     }
     
+    var absChange: String {
+        if let changeDouble = Double(change) {
+            return "\(abs(changeDouble))"
+        } else {
+            return change
+        }
+    }
+    
     var displayChange: String {
         positiveChange ? "+\(change)" : "\(change)"
     }
@@ -72,6 +80,24 @@ struct Coin: Hashable {
     
     var volume24hDouble: Double {
         Double(volume24h) ?? 0
+    }
+    
+    static var dummy: Coin {
+        Coin(uuid: "Qwsogvtv82FCd",
+             symbol: "BTC",
+             name: "Bitcoin",
+             color: "",
+             iconUrl: URL(string: "https://cdn.coinranking.com/Sy33Krudb/btc.svg")!,
+             marketCap: "159393904304",
+             price: "500.45",
+             listedAt: 100,
+             change: "-5.9",
+             rank: 1,
+             lowVolume: false,
+             coinrankingUrl: "",
+             volume24h: "433448746484844",
+             btcPrice: "1",
+             isFavorite: false)
     }
 }
 

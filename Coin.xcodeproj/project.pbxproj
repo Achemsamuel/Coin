@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		62A432342D82D33C00A0FBC1 /* CoinNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 62A432332D82D33C00A0FBC1 /* CoinNetworking */; };
-		62A432812D834A7B00A0FBC1 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 62A432802D834A7B00A0FBC1 /* SwiftSVG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +71,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				62A432342D82D33C00A0FBC1 /* CoinNetworking in Frameworks */,
-				62A432812D834A7B00A0FBC1 /* SwiftSVG in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +149,6 @@
 			name = Coin;
 			packageProductDependencies = (
 				62A432332D82D33C00A0FBC1 /* CoinNetworking */,
-				62A432802D834A7B00A0FBC1 /* SwiftSVG */,
 			);
 			productName = Coin;
 			productReference = 62A431EA2D8243A700A0FBC1 /* Coin.app */;
@@ -236,7 +233,6 @@
 			mainGroup = 62A431E12D8243A700A0FBC1;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				62A4327F2D834A7B00A0FBC1 /* XCRemoteSwiftPackageReference "SwiftSVG" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 62A431EB2D8243A700A0FBC1 /* Products */;
@@ -449,7 +445,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -482,7 +477,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -610,26 +604,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		62A4327F2D834A7B00A0FBC1 /* XCRemoteSwiftPackageReference "SwiftSVG" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mchoe/SwiftSVG";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
 		62A432332D82D33C00A0FBC1 /* CoinNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CoinNetworking;
-		};
-		62A432802D834A7B00A0FBC1 /* SwiftSVG */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 62A4327F2D834A7B00A0FBC1 /* XCRemoteSwiftPackageReference "SwiftSVG" */;
-			productName = SwiftSVG;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

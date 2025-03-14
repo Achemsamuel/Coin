@@ -4,10 +4,9 @@
 //
 //  Created by Achem Samuel on 3/13/25.
 //
-import SwiftSVG
 import SwiftUI
 
-public struct RemoteImage: View, Identifiable {
+public struct RemoteImage: View {
     private let id: UUID = UUID()
     private var url: URL?
     private var scaleImage: Bool

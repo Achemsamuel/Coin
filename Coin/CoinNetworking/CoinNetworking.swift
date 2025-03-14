@@ -33,6 +33,22 @@ final class CoinApi: CoinNetworkingService, @unchecked Sendable  {
         return try await super.makeRequest(url: url, parameters: parameters, method: method, returning: objectType)
     }
     
+    func getCoinDetail<T: Decodable>(id: String,
+                                       parameters: Parameters = [:],
+                           returning objectType: T.Type) async throws -> T? {
+        let url = URL(string: "https://api.coinranking.com/v2/coin/\(id)")
+        let method: HTTPMethod = .get
+        return try await super.makeRequest(url: url, parameters: parameters, method: method, returning: objectType)
+    }
+    
+    func getPriceHistory<T: Decodable>(id: String,
+                                       timeFrame: String = "24h",
+                           returning objectType: T.Type) async throws -> T? {
+        let url = URL(string: "https://api.coinranking.com/v2/coin/\(id)/history?timePeriod=\(timeFrame)")
+        let method: HTTPMethod = .get
+        return try await super.makeRequest(url: url, parameters: [:], method: method, returning: objectType)
+    }
+    
     func post<T: Decodable>(url: URL?,
                            parameters: Parameters = [:],
                            returning objectType: T.Type) async throws -> T? {

@@ -27,6 +27,7 @@ struct CoinTableView: UIViewControllerRepresentable {
     }
     
     private func didTapCoin(with coin: Coin) {
+        localRepo.selectedCoin = coin
         path.append(NavigationItem.coinDetails(coin: coin))
     }
 }

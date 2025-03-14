@@ -16,6 +16,7 @@ struct CoinApp: App {
         WindowGroup {
             if userLoggedIn {
                 CoinListView(dataStore: coinsDataLocalRepository)
+                    .dynamicTypeSize(...DynamicTypeSize.large)
             } else {
                 LandingView {
                     userLoggedIn = true

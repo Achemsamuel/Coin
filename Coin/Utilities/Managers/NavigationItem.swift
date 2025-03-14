@@ -16,7 +16,7 @@ struct ViewFactory {
     static func destination(for item: NavigationItem, datastore: CoinsDataLocalRepository, path: Binding<NavigationPath>) -> AnyView {
         switch item {
         case .coinDetails(let coin):
-            return AnyView(CoinListItemView(coin: coin))
+            return AnyView(CoinDetailView(dataStore: datastore))
         case .favorites:
             return AnyView(CoinFavoritesView(dataStore: datastore, navigationPath: path))
         }
