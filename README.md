@@ -1,4 +1,4 @@
-# 🪙 Coin – iOS Cryptocurrency Tracker  
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-14 at 12 53 26](https://github.com/user-attachments/assets/4d312a67-97a5-4f6f-966a-1211dbf97ecd)# 🪙 Coin – iOS Cryptocurrency Tracker  
 
 Coin is an iOS app that helps users track cryptocurrency prices, view historical performance charts, and manage favorite coins. The app fetches data from **CoinRanking API**, offering a smooth and interactive experience using **SwiftUI** and **Combine**.  
 
@@ -35,7 +35,10 @@ Coin is an iOS app that helps users track cryptocurrency prices, view historical
 - This string is then loaded inside a <div>svgString<\div> and loaded into the WKWebView.
 
 ## Screenshots
-![Coin List View](https://i.postimg.cc/G3Ggn0JV/temp-Imagehh-QGg3.avif)
-![Coin List View (Dark)](https://i.postimg.cc/wTzf6Wwv/temp-Image-P1i45-X.avif)
-![Coin Detail View](https://i.postimg.cc/brc6SL8m/temp-Image7-Qz4gz.avif)
-![Coin Favorites View](https://i.postimg.cc/sxYTYSgs/temp-Image-BJet-NN.avif)
+![Coin List View](https://github.com/user-attachments/assets/00d178b4-d123-46df-8f60-ada106a2b773)
+![Coin List View (Dark)](https://github.com/user-attachments/assets/8a93cdbd-aa79-4959-a24a-f67283b0a0d3)
+![Coin Favorites View](https://github.com/user-attachments/assets/6b6fdbb4-8536-4d72-9fd6-88a33360cf2e)
+![Coin Detail View](https://github.com/user-attachments/assets/f54612a4-d7cb-48a9-85c1-cf2efd2e5d61)
+
+
+
