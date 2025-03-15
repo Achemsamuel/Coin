@@ -34,6 +34,8 @@ Coin is an iOS app that helps users track cryptocurrency prices, view historical
 
 ## Screenshots
 ![dark](https://github.com/user-attachments/assets/e83aa625-20d0-4353-9bf4-5ddaf493398a)
+
+
 ![light](https://github.com/user-attachments/assets/8817d299-e5df-489c-84b2-1d8119f2cb42)
 
 
