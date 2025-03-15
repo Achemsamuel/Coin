@@ -33,7 +33,7 @@ Coin is an iOS app that helps users track cryptocurrency prices, view historical
 - This string is then loaded inside a <div>svgString<\div> and loaded into the WKWebView.
 
 ## Screenshots
-<img src="[https://github.com/favicon.ico](https://github.com/user-attachments/assets/00d178b4-d123-46df-8f60-ada106a2b773)" height="40">
+![Coin List View](<img src="[https://github.com/favicon.ico](https://github.com/user-attachments/assets/00d178b4-d123-46df-8f60-ada106a2b773)" height="40">)
 
 
 ![Coin List View](https://github.com/user-attachments/assets/00d178b4-d123-46df-8f60-ada106a2b773)
