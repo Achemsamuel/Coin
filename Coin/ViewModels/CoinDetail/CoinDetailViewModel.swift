@@ -61,6 +61,7 @@ extension CoinDetailView {
         }
         
         private lazy var apiClient: CoinApi = .client
+        private var modelSetup: Bool = false
         
         var history: [CoinHistoryItem] {
             coinPriceHistory[selectedTimeframe] ?? []
@@ -80,12 +81,12 @@ extension CoinDetailView {
         
         init(dataStore: CoinsDataLocalRepository) {
             self.dataStore = dataStore
-            setup()
         }
         
-        private func setup() {
+        func setup() {
+            guard !modelSetup else { return }
             getCoinDetail()
-            fetchCoinPriceHistory()
+            modelSetup = true
         }
         
         private func getCoinDetail() {
@@ -100,6 +101,7 @@ extension CoinDetailView {
                         let detail = detailResponse?.data.coin.coinDetail
                         coinDetail = detail
                         showLoader = false
+                        fetchCoinPriceHistory()
                     }
                 } catch {
                     runOnMainThread { [weak self] in

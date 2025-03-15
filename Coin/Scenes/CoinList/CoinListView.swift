@@ -83,7 +83,7 @@ struct CoinListView: View {
         VStack {
             ProgressView()
             Text("Loading" + String(repeating: ".", count: viewModel.dotCount))
-                .font(.body)
+                .font(.title)
                 .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                 .onReceive(viewModel.timer) { _ in
                     if viewModel.showLoader {

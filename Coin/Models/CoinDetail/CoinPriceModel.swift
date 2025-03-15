@@ -5,6 +5,8 @@
 //  Created by Achem Samuel on 3/13/25.
 //
 
+import Foundation
+
 struct CoinHistoryData: Codable {
     let change: String
     let history: [CoinHistoryItem]
@@ -17,6 +19,10 @@ struct CoinHistoryItem: Codable {
     
     var displayPrice: Double {
         Double(price) ?? 0
+    }
+    
+    var date: Date {
+        Date(timeIntervalSince1970: Double(timestamp))
     }
 }
 

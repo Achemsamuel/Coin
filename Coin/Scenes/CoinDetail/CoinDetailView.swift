@@ -32,6 +32,9 @@ struct CoinDetailView: View {
             }
             .padding(20)
         }
+        .onAppear {
+            viewModel.setup()
+        }
         .scrollIndicators(.hidden)
         .navigationTitle(viewModel.coinName)
         .navigationBarTitleDisplayMode(.inline)
@@ -103,7 +106,7 @@ struct CoinDetailView: View {
                     ForEach(viewModel.history, id: \.timestamp) { data in
                         if let price = Double(data.price) {
                             LineMark(
-                                x: .value(viewModel.selectedTimeframe.xAxisTitle, Date(timeIntervalSince1970: Double(data.timestamp))),
+                                x: .value(viewModel.selectedTimeframe.xAxisTitle, data.date),
                                 y: .value(viewModel.selectedTimeframe.yAxisTitle, price)
                             )
                             .foregroundStyle(viewModel.coin.changeColor)
