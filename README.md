@@ -1,5 +1,3 @@
-![Simulator Screenshot - iPhone 16 Pro - 2025-03-14 at 12 53 26](https://github.com/user-attachments/assets/4d312a67-97a5-4f6f-966a-1211dbf97ecd)# 🪙 Coin – iOS Cryptocurrency Tracker  
-
 Coin is an iOS app that helps users track cryptocurrency prices, view historical performance charts, and manage favorite coins. The app fetches data from **CoinRanking API**, offering a smooth and interactive experience using **SwiftUI** and **Combine**.  
 
 ---
