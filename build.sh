@@ -3,9 +3,8 @@
 # Exit immediately if any command fails
 set -e
 
-# Define variables
 SCHEME="Debug"
-PROJECT="Coin.xcodeproj"  # Use .xcworkspace if using CocoaPods
+PROJECT="Coin.xcodeproj"
 DESTINATION="platform=iOS Simulator,name=iPhone 16,OS=latest"
 
 echo "🚀 Running Unit Tests for $SCHEME scheme..."
