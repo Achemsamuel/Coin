@@ -50,37 +50,6 @@ struct CoinListItemView: View {
     }
 }
 
-// MARK: - Price View
-private struct PriceView: View {
-    let price: String
-    
-    var body: some View {
-        Text(price)
-            .font(.caption)
-            .fontWeight(.medium)
-            .foregroundStyle(.primary)
-            .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
-    }
-}
-
-// MARK: - Change View
-private struct ChangeView: View {
-    let change: String
-    let changeColor: Color
-    
-    var body: some View {
-        Text(change)
-            .font(.caption)
-            .fontWeight(.medium)
-            .foregroundStyle(.white)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 2)
-            .background(changeColor)
-            .clipShape(RoundedRectangle(cornerRadius: 3))
-            .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
-    }
-}
-
 // MARK: - Preview
 #Preview {
     CoinListItemView(coin: Coin(uuid: "", symbol: "BTC", name: "Bitcoin", color: "", iconUrl: URL(string: "https://cdn.coinranking.com/Sy33Krudb/btc.svg")!, marketCap: "", price: "20,000", listedAt: 0, change: "-1.0", rank: 2, lowVolume: false, coinrankingUrl: "", volume24h: "", btcPrice: "", isFavorite: false))

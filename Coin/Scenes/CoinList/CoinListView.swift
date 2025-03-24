@@ -34,7 +34,7 @@ struct CoinListView: View {
                     favoritesView
                 }
             }
-            .navigationTitle("Coins")
+            .navigationTitle("Coins".localized)
             .navigationBarTitleDisplayMode(.large)
             .navigationDestination(for: NavigationItem.self) { item in
                 ViewFactory.destination(for: item, datastore: viewModel.dataStore, path: $navigationPath)
@@ -42,7 +42,7 @@ struct CoinListView: View {
         }
         .background(.coinBackground)
         .if(!viewModel.dataStore.coins.isEmpty) { view in
-            view.searchable(text: $viewModel.searchQuery, placement: .automatic, prompt: Text("Search by name or symbol..."))
+            view.searchable(text: $viewModel.searchQuery, placement: .automatic, prompt: Text("Search by name or symbol...".localized))
         }
         .onAppear {
             viewModel.prefetchCoins()
@@ -82,7 +82,7 @@ struct CoinListView: View {
     private var emptyState: some View {
         VStack {
             ProgressView()
-            Text("Loading" + String(repeating: ".", count: viewModel.dotCount))
+            Text("Loading".localized + String(repeating: ".", count: viewModel.dotCount))
                 .font(.title)
                 .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                 .onReceive(viewModel.timer) { _ in

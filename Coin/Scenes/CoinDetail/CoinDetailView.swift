@@ -49,7 +49,7 @@ struct CoinDetailView: View {
                     .fontWeight(.bold)
                     .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                 
-                Text("\(viewModel.coinName) • Rank #\(viewModel.coin.rank)")
+                Text("\(viewModel.coinName) • Rank #\(viewModel.coin.rank)".localized)
                     .font(.footnote)
                     .foregroundColor(.gray)
                     .fontWeight(.regular)
@@ -79,7 +79,7 @@ struct CoinDetailView: View {
     private var performanceChart: some View {
         VStack {
             // Timeframe Picker
-            Picker("Timeframe", selection: $viewModel.selectedTimeframe) {
+            Picker("Timeframe".localized, selection: $viewModel.selectedTimeframe) {
                 ForEach(TimeFrame.allCases, id: \.self) { timeframe in
                     Text(timeframe.title)
                         .padding(.horizontal)
@@ -136,7 +136,7 @@ struct CoinDetailView: View {
     
     private var statisticsSection: some View {
         VStack(spacing: 10) {
-            Text("Statistics")
+            Text("Statistics".localized)
                 .font(.body)
                 .foregroundStyle(.gray)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -146,13 +146,13 @@ struct CoinDetailView: View {
                 .padding(.bottom, 10)
             
             HStack(spacing: 10) {
-                statBlock(title: "Market Cap", value: "\(viewModel.coinDetail?.displayMarketCap ?? "")")
-                statBlock(title: "24h Volume", value: "\(viewModel.coinDetail?.displayVolume24h ?? "")")
+                statBlock(title: "Market Cap".localized, value: "\(viewModel.coinDetail?.displayMarketCap ?? "")")
+                statBlock(title: "24h Volume".localized, value: "\(viewModel.coinDetail?.displayVolume24h ?? "")")
             }
             
             HStack(spacing: 10) {
-                statBlock(title: "Circulating Supply", value: "\(viewModel.coinDetail?.supply.displayCirculatingSupply ?? "")")
-                statBlock(title: "All-Time High", value: "\(viewModel.coinDetail?.allTimeHigh.displayPrice ?? "")")
+                statBlock(title: "Circulating Supply".localized, value: "\(viewModel.coinDetail?.supply.displayCirculatingSupply ?? "")")
+                statBlock(title: "All-Time High".localized, value: "\(viewModel.coinDetail?.allTimeHigh.displayPrice ?? "")")
             }
         }
     }
@@ -160,7 +160,7 @@ struct CoinDetailView: View {
     // MARK: - Additional Info
     private var additionalInfo: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("About \(viewModel.coinName)")
+            Text("About \(viewModel.coinName)".localized)
                 .font(.body)
                 .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
             
@@ -172,7 +172,7 @@ struct CoinDetailView: View {
                     .foregroundColor(.gray)
                     .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                 
-                Link("Official Website", destination: coin.websiteUrl)
+                Link("Official Website".localized, destination: coin.websiteUrl)
                     .font(.subheadline)
                     .fontWeight(.bold)
                     .foregroundColor(.blue)

@@ -16,4 +16,8 @@ extension Bundle {
     var coinApiKey: String {
         return value(for: "Coin_Api_Key") ?? ""
     }
+    
+    var coinApiUrlString: String {
+        return value(for: "Coin_Api_Url") ?? ""
+    }
 }

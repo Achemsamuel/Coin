@@ -16,7 +16,7 @@ struct CoinFavoritesView: View {
             if dataStore.favoriteCoins.isEmpty {
                 VStack {
                     Spacer()
-                    Text("You haven't added any favorites yet!")
+                    Text("You haven't added any favorites yet!".localized)
                         .font(.body)
                         .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                     Spacer()

@@ -28,10 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		62640E282D90E44C00109700 /* CoinNetworking 2 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "CoinNetworking 2"; sourceTree = "<group>"; };
 		62A431EA2D8243A700A0FBC1 /* Coin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A431FC2D8243A800A0FBC1 /* CoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A432062D8243A800A0FBC1 /* CoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		62A4322B2D82459A00A0FBC1 /* CoinNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoinNetworking; path = ../CoinNetworking; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -116,7 +116,7 @@
 		62A4322A2D82452000A0FBC1 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				62A4322B2D82459A00A0FBC1 /* CoinNetworking */,
+				62640E282D90E44C00109700 /* CoinNetworking 2 */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -435,6 +435,7 @@
 				CODE_SIGN_ENTITLEMENTS = Coin/Coin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COIN_API_KEY = coinranking10f3d88a9c3d0d782237be145e96679a13990f5737cdc5c3;
+				COIN_API_URL = "https://api.coinranking.com/v2/coins";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Coin/Preview Content\"";
 				DEVELOPMENT_TEAM = 5L94XRPVKN;
@@ -467,6 +468,7 @@
 				CODE_SIGN_ENTITLEMENTS = Coin/Coin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COIN_API_KEY = coinranking10f3d88a9c3d0d782237be145e96679a13990f5737cdc5c3;
+				COIN_API_URL = "https://api.coinranking.com/v2/coins";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Coin/Preview Content\"";
 				DEVELOPMENT_TEAM = 5L94XRPVKN;
