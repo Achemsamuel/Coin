@@ -24,6 +24,7 @@ Coin is an iOS app that helps users track cryptocurrency prices, view historical
 - Download the source file
 - Click to open and run it with Xcode 
 - Build the application and test it.
+- You can choose to run just te test via the run script or build.sh file
 
 ## Challenges 
 - **Loading SVG in Swift:**
